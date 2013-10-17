@@ -1,6 +1,6 @@
 <?php
 
-namespace BW\Helper;
+namespace BW;
 
 class Transliter {
 
