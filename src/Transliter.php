@@ -1,7 +1,5 @@
 <?php
 
-namespace BW;
-
 class Transliter {
 
     private $alphabet = array(
