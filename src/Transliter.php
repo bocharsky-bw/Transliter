@@ -77,7 +77,7 @@ class Transliter {
      * @param string $string Строка для транслитерации
      * @return string Строка транслитом
      **/
-    public function getTranslit($string) {
+    public function translit($string) {
         
         return strtr($string, $this->alphabet);
     }
@@ -88,8 +88,8 @@ class Transliter {
      * @param string $string Строка для транслитерации
      * @return string Slug транслитом
      **/
-    public function getSlug($string) {
+    public function toSlug($string) {
         
-        return preg_replace( '/[^0-9A-Za-z_-]/', '', preg_replace( '/\s+/i', '-', strtr($string, $this->alphabet) ) );
+        return preg_replace('/[^0-9A-Za-z_-]/', '', preg_replace('/\s+/i', '-', $this->translit($string)));
     }
 }
