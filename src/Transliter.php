@@ -79,7 +79,7 @@ class Transliter {
      **/
     public function translit($string) {
         
-        return strtr($string, $this->alphabet);
+        return mb_strtr($string, $this->alphabet);
     }
 
     /**
